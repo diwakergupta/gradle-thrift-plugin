@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.6.0'
+    }
+}
+
+apply plugin: 'eclipse'
+apply plugin: 'groovy'
+apply plugin: 'license'
+apply plugin: 'maven'
+
+group = 'net.floatingsun.gradle.plugins'
+version = '0.1.0-SNAPSHOT'
+
+dependencies {
+    compile gradleApi()
+    groovy localGroovy()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.2'
+}
