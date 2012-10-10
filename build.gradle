@@ -1,6 +1,5 @@
 buildscript {
     repositories {
-        mavenLocal()
         mavenCentral()
     }
     dependencies {
@@ -15,6 +14,10 @@ apply plugin: 'maven'
 
 group = 'net.floatingsun.gradle.plugins'
 version = '0.1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
 
 dependencies {
     compile gradleApi()
